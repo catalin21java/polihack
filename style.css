@@ -392,14 +392,14 @@ html {
     
     .card__front {
       background-color: var(--clr);
-      background-image:url("/resources/fam.jpg");
+      background-image:url("resources/fam.jpg ");
       background-size: cover;
       background-blend-mode: overlay;
       color: #333;
     }
     .card__front2 {
         background-color: var(--clr);
-        background-image:url("/resources/tea.jpg");
+        background-image:url("resources/tea.jpg");
         background-size: cover;
         background-blend-mode: overlay;
         color: #333;
@@ -407,24 +407,13 @@ html {
     
       .card__front3 {
         background-color: var(--clr);
-        background-image:url("/resources/emp.jpg");
+        background-image:url("resources/emp.jpg");
         background-size: cover;
         background-blend-mode: overlay;
         color: #333;
       }
       
     
-    .card__front::before {
-      content: '';
-      position: absolute;
-      --spacer: 1em;
-      top: var(--spacer);
-      bottom: var(--spacer);
-      left: var(--spacer);
-      right: var(--spacer);
-      border: 3px solid currentColor;
-      transform: var(--level-one);
-    }
     
     .card__title {
       font-size: 2.5rem;
