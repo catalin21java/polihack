@@ -237,7 +237,16 @@
     <input type="text" id="Vineri" name="Vineri"><br><br>
     <input type="submit" value="Add Entry">
   </form>
-  
+  <h1>Chat</h1>
+  <table id="Mesaj">
+    <thead>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <form id="Chat">
+    <input type="text" id="sent" name="sent"><br><br>
+    <input type="submit" value="Trimite mesaj">
+  </form>
     <script>
       fetch('/rutina')
         .then(response => response.json())
@@ -257,6 +266,16 @@
             cell4.textContent = item.Miercuri;
             cell5.textContent = item.Joi;
             cell6.textContent = item.Vineri;
+          });
+        })
+        fetch('/chat')
+        .then(response => response.json())
+        .then(data => {
+          const rutinaTable = document.getElementById('Mesaj').getElementsByTagName('tbody')[0];
+          data.forEach(item => {
+            const row = rutinaTable.insertRow();
+            const cell1 = row.insertCell(0);
+            cell1.textContent = item.Mesaj;
           });
         })
         .catch(error => console.error('Error:', error));
@@ -287,7 +306,28 @@
         })
         .catch(error => console.error('Error:', error));
       });
+
+      document.getElementById('Chat').addEventListener('submit', function(event) {
+        event.preventDefault();
   
+        const formData = new FormData(this);
+        const sent = formData.get('sent');
+  
+        fetch('/addchat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({sent})
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('New entry added:', data);
+          // Optionally, update the table with the new data
+          // Fetch the data again and update the table
+        })
+        .catch(error => console.error('Error:', error));
+      });
     </script>
 </body>
    
