@@ -75,16 +75,18 @@
           Your browser does not support the video tag.
           </video>
 
+          <button class="overlay-button" onclick="scrollToAbout()" >Find out more about Project Helix!</button>
+
     </div>
 
 
 
      <!-- INCEPUT SITE-->
    
-<div style="position: relative; ">
+<div style="position: relative; " id="about">
     <div class="sections">
       <h3 style="text-align:center; font-size:4vh;">Projects</h3>
-      <p style="font-size: 2.5vh;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <p style="font-size: 2.5vh; padding-left: 15%;padding-right: 15%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          Nam vehicula lectus consectetur blandit fermentum. Aliquam 
          in tempus justo, sit amet viverra enim. Donec at tortor vitae 
          tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
@@ -100,7 +102,7 @@
 
   
 
-<div class="container">
+<div class="container" >
     <div class="row">
       <div class="col-md-4">
         <div class="card">
@@ -149,21 +151,31 @@
   </div>
 
 
-  
-  <div style="position: relative; ">
-    <div class="sections">
-      <h3 style="text-align:center; font-size:4vh;">Projects</h3>
-      <p style="font-size: 2.5vh;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Nam vehicula lectus consectetur blandit fermentum. Aliquam 
-         in tempus justo, sit amet viverra enim. Donec at tortor vitae 
-         tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
-          at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
-           at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
-            luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
-  
+  <div class="row g-0">
+    <div class="col-12 col-md-6 g-0">
+      <div class="leftside w3-white" style="padding-top: 10%;padding-bottom: 10%;">
+        <!-- Content for the left side -->
+        <h1 class="text-center" style="font-size: 5vh;"> ABOUT ME</h1>
+        <p class="text-justify " style="font-size: 3vh; padding-left: 3%; padding-top: 3%; padding-right: 3%; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam vehicula lectus consectetur blandit fermentum. Aliquam 
+          in tempus justo, sit amet viverra enim. Donec at tortor vitae 
+          tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
+           at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
+            at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
+             luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
+
       </div>
+    </div>
+    <div class="col-12 col-md-6 g-0">
+      <div class="rightside" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Content for the right side -->
+        
+      </div>
+    </div>
+    
   </div>
-       
+
+
   
   
 
@@ -173,7 +185,11 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 
-   
+   <script>
+        function scrollToAbout() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    }
+   </script>
 
 
 
@@ -192,107 +208,6 @@
 
     <!-- Footer end. -->
     </footer>
-    <head>
-      <title>Rutina Data</title>
-    </head>
-    <style>
-      table {
-        border-collapse: collapse;
-        width: 50%;
-        margin-top: 20px;
-      }
-      th, td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-    </style>
-    <script src="scripts.js"></script> 
-    <h1>Rutina Data</h1>
-    <table id="rutinaTable">
-      <thead>
-        <tr>
-          <th>Ora</th>
-          <th>Luni</th>
-          <th>Marti</th>
-          <th>Miercuri</th>
-          <th>Joi</th>
-          <th>Vineri</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <h2>Add New Entry</h2>
-  <form id="addEntryForm">
-    <label for="Ora">Ora:</label>
-    <input type="text" id="Ora" name="Ora"><br><br>
-    <label for="Luni">Luni:</label>
-    <input type="text" id="Luni" name="Luni"><br><br>
-    <label for="Marti">Marti:</label>
-    <input type="text" id="Marti" name="Marti"><br><br>
-    <label for="Miercuri">Miercuri:</label>
-    <input type="text" id="Miercuri" name="Miercuri"><br><br>
-    <label for="Joi">Joi:</label>
-    <input type="text" id="Joi" name="Joi"><br><br>
-    <label for="Vineri">Vineri:</label>
-    <input type="text" id="Vineri" name="Vineri"><br><br>
-    <input type="submit" value="Add Entry">
-  </form>
-  
-    <script>
-      fetch('/rutina')
-        .then(response => response.json())
-        .then(data => {
-          const rutinaTable = document.getElementById('rutinaTable').getElementsByTagName('tbody')[0];
-          data.forEach(item => {
-            const row = rutinaTable.insertRow();
-            const cell1 = row.insertCell(0);
-            const cell2 = row.insertCell(1);
-            const cell3 = row.insertCell(2);
-            const cell4 = row.insertCell(3);
-            const cell5 = row.insertCell(4);
-            const cell6 = row.insertCell(5);
-            cell1.textContent = item.Ora;
-            cell2.textContent = item.Luni;
-            cell3.textContent = item.Marti;
-            cell4.textContent = item.Miercuri;
-            cell5.textContent = item.Joi;
-            cell6.textContent = item.Vineri;
-          });
-        })
-        .catch(error => console.error('Error:', error));
-  
-        document.getElementById('addEntryForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-  
-        const formData = new FormData(this);
-        const Ora = formData.get('Ora');
-        const Luni = formData.get('Luni');
-        const Marti = formData.get('Marti');
-        const Miercuri = formData.get('Miercuri');
-        const Joi = formData.get('Joi');
-        const Vineri = formData.get('Vineri');
-  
-        fetch('/addRutina', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ Ora,Luni,Marti,Miercuri,Joi,Vineri })
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('New entry added:', data);
-          // Optionally, update the table with the new data
-          // Fetch the data again and update the table
-        })
-        .catch(error => console.error('Error:', error));
-      });
-  
-    </script>
-</body>
+    
    
 </html>
