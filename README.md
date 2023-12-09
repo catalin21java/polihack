@@ -1,2 +1,3 @@
-# polihack
-ajutor!
+# sicopan
+
+Efeciv Matei e genial
