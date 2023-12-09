@@ -15,11 +15,11 @@ body, html {
   }
   
   .bgimg-1 {
-    background-image: url("bckg1.png");
+    background-image: url("resources/emp2.jpg");
     min-height: 100%;
   }
   .bgimg-2 {
-    background-image: url("bckg1.png");
+    background-image: url("resources/emp2.jpg");
     min-height: 50%;
   }
   
@@ -47,13 +47,14 @@ body, html {
   
   
   .caption {
-  
-    position: absolute;
+      position: absolute;
     left: 0;
+    right: 2vw;
     top: 30%;      
     width: 100%;
     text-align: left;
-    padding-left  : 20%;
+    padding-left  : 10%;
+    padding-right: 10%;
     color: #D558df;
     -webkit-user-drag: none;
     user-select: none;
@@ -63,7 +64,7 @@ body, html {
    -webkit-user-drag: none;
     color: #D558df;
     padding: 1px;
-    font-size: 7vh ;
+    font-size:  3vw ;
     letter-spacing: 5px;
     
   }
@@ -112,7 +113,7 @@ body, html {
 .sections
 {
   color: #777;
-  background-color:#856428  ; 
+  background:  #D558df;  ; 
   text-align:center;
   padding:50px 80px;
   text-align: justify;
@@ -238,6 +239,7 @@ body, html {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+    z-index: 2;
   }
 
   #check:checked ~ .navbar {
@@ -264,3 +266,52 @@ body, html {
 }
 
   
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 5%;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.modal-content {
+  background: #D558df;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+ 
+}

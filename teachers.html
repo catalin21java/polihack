@@ -9,25 +9,23 @@
 
 
   <header class="header">
-    <a href="#" class="logo">Logo</a>
+    <a class="w3-bar-item w3-hide-medium" href="index.html" style="padding-left: 0%; padding-top: 1%; padding-bottom: 0%;">
+      <img style="height: 45px; width: 100px; " src="resources/logo.png" alt="Sicopan">
+    </a>
 
-    <input type="checkbox" id="check" />
-    <label for="check" class="icons">
-      <i class="bx bx-menu" id="menu-icon"></i>
-      <i class="bx bx-x" id="close-icon"></i>
-    </label>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+         <i class="bx bx-menu" id="menu-icon"></i>
+         <i class="bx bx-x" id="close-icon"></i>
+      </label>
 
-    <nav class="navbar">
-      <a href="#" class="nav-item" style="--i: 0">About</a>
-      <a href="#" class="nav-item" style="--i: 1">Projects</a>
-      <a href="#" class="nav-item" style="--i: 4">Contact</a>
-    </nav>
+    
   </header>
 
 
     <div class="bgimg-1">
       <div class="caption">
-        <span class="borders">I'm <span class="auto-input"></span>
+        <span class="borders"><span class="auto-input"></span>
         </span>
         
         
@@ -35,39 +33,6 @@
     </div>
 
 <!--HERE WE WILL SPLI THE SCREEN IN HALF< HALF MY PHOTO HALF MY DESCRIPTION    -->
-
-
-  <div class="row g-0">
-    <div class="col-12 col-md-6 g-0">
-      <div class="leftside " style="padding-top: 10%;">
-        <!-- Content for the left side -->
-        <h1 class="text-center" style="font-size: 5vh;"> ABOUT ME</h1>
-        <p class="text-justify " style="font-size: 3vh; padding-left: 3%; padding-top: 3%; padding-right: 3%; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nam vehicula lectus consectetur blandit fermentum. Aliquam 
-          in tempus justo, sit amet viverra enim. Donec at tortor vitae 
-          tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
-           at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
-            at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
-             luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
-
-      </div>
-    </div>
-    <div class="col-12 col-md-6 g-0">
-      <div class="rightside  ">
-        
-        <!-- Content for the right side -->
-      </div>
-    </div>
-  </div>
-
-
-
-
-<div class="bgimg-2">
-  <div class="caption">
-    <span class="borders" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
-  </div>
-</div>
 
 
 
@@ -87,6 +52,11 @@
     </div>
 </div>
 
+
+
+
+
+
 <div class="bgimg-2">
   <div class="caption">
     <span class="borders" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
@@ -96,17 +66,99 @@
 <!-- HERE WE WILL TALK ABOUT MY PROJECT AND HAVE DIFFERENT PAGE FOR PHOTOS AND OTHER STUFF-->
 <div style="position:relative;">
   <div class="sections">
-    <h3 style="text-align:center; font-size:4vh;">Contact</h3>
-    <p style="font-size: 2.5vh;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-       Nam vehicula lectus consectetur blandit fermentum. Aliquam 
-       in tempus justo, sit amet viverra enim. Donec at tortor vitae 
-       tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
-        at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
-         at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
-          luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
 
+    <div class="button-container">
+      <button id="openModalBtn1" onclick="openModal('myModal1')">Questions and Answers</button>
+      <button id="openModalBtn2" onclick="openModal('myModal2')">Planner</button>
+      <button id="openModalBtn3" onclick="openModal('myModal3')">Talk to an expert</button>
+      <button id="openModalBtn4" onclick="openModal('myModal4')">Resources</button>
     </div>
+
+    <div class="modal-container" id="myModal1">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal1')">&times;</span>
+        <h2>Questions and Answers</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+        </p>
+        <h3>Resources:</h3>
+        <ul>
+          <li><a href="#">Resource 1</a></li>
+          <li><a href="#">Resource 2</a></li>
+          <li><a href="#">Resource 3</a></li>
+        </ul>
+        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+      </div>
+    </div>
+
+
+
+
+
+    <div class="modal-container" id="myModal2">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal2')">&times;</span>
+        <h2>Questions and Answers</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+        </p>
+        <h3>Resources:</h3>
+        <ul>
+          <li><a href="#">Resource 1</a></li>
+          <li><a href="#">Resource 2</a></li>
+          <li><a href="#">Resource 3</a></li>
+        </ul>
+        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+      </div>
+    </div>
+
+
+
+    
+
+    <div class="modal-container" id="myModal3">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal3')">&times;</span>
+        <h2>Questions and Answers</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+        </p>
+        <h3>Resources:</h3>
+        <ul>
+          <li><a href="#">Resource 1</a></li>
+          <li><a href="#">Resource 2</a></li>
+          <li><a href="#">Resource 3</a></li>
+        </ul>
+        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+      </div>
+    </div>
+
+    <div class="modal-container" id="myModal4">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('myModal4')">&times;</span>
+        <h2>Questions and Answers</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+        </p>
+        <h3>Resources:</h3>
+        <ul>
+          <li><a href="#">Resource 1</a></li>
+          <li><a href="#">Resource 2</a></li>
+          <li><a href="#">Resource 3</a></li>
+        </ul>
+        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+      </div>
+    </div>
+
+  </div>
 </div>
+
+
+
 
 <div class="bgimg-2">
   <div class="caption">
@@ -121,12 +173,27 @@
 <script>
   var typed = new Typed(".auto-input",{
 
-strings:["Catalin Borzei!","a Front-End enthusiast!","a Java enthusiast!","an UI Designer!","a Robotics enthusiast!","an UE5 fan!"],
+strings:["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales magna id ante vehicula tempor. "],
 typeSpeed:50,
 backSoeed:50,
-loop:true
+loop:false
 
 })
+
+
+
+
 </script>
+
+<script>
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
