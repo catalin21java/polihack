@@ -56,11 +56,10 @@ app.post('/addRutina', express.json(), (req, res) => {
 });
 
 // Serve the index.html file
+app.use(express.static(path.join(__dirname)));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'cod.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
-
-
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
