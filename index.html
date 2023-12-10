@@ -73,6 +73,14 @@
   function closeLoginModal() {
     document.getElementById('loginModal').style.display = 'none';
   }
+
+  function openLoginModal2() {
+    document.getElementById('loginModal2').style.display = 'block';
+  }
+
+  function closeLoginModal2() {
+    document.getElementById('loginModal2').style.display = 'none';
+  }
   </script>
 
 
@@ -88,6 +96,10 @@
         <!-- New login button -->
         <a href="javascript:void(0);" onclick="openLoginModal()" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black">
           <i class="fa fa-sign-in"></i> Login
+        </a>
+         <!-- New login button -->
+         <a href="javascript:void(0);" onclick="openLoginModal2()" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black">
+          <i class="fa fa-credit-card"></i> Donate
         </a>
 
         <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black"><i class="fa fa-bookmark"></i> Contact Us</a>
@@ -131,6 +143,27 @@
           </p>
   
           <button  type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="loginModal2" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container">
+        <span onclick="closeLoginModal2()" class="w3-button w3-display-topright">&times;</span>
+        <h2>Donate</h2>
+        <form>
+          <input type="text" placeholder="Name" style="width: 100%;">
+          <p>
+            <input type="password" placeholder="Card number" style="width: 100%;">
+            <input type="password" placeholder="Sum of donation" style="width: 100%;">
+          </p>
+  
+          
+  
+          <button  type="submit">Donate now!</button>
         </form>
       </div>
     </div>
