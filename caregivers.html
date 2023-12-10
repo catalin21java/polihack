@@ -4,6 +4,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style2.css">
+  <!-- Include Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome 5 -->
+
+
+  <style>
+    /* Adjust the size of the carousel container */
+    .owl-carousel {
+        width: 70%; /* Set your preferred width */
+        margin: auto; /* Center the carousel */
+        padding: 0,0,0,0;
+    }
+
+    /* Adjust the size of the images within the carousel */
+    .owl-carousel .item {
+        position: relative;
+    }
+
+    .owl-carousel .item img {
+        width: 100%; /* Make the images fill the container */
+        height: 450px; /* Set your preferred fixed height */
+        object-fit:cover; /* Ensure the aspect ratio is maintained */
+    }
+
+    .owl-carousel .item .text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the text */
+        color: white;
+       
+        box-sizing: border-box;
+    }
+
+    /* Center the navigation arrows */
+    .owl-nav {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .owl-nav button {
+        background: none;
+        border: none;
+        font-size: 24px;
+    }
+</style>
 </head>
 <body>
 
@@ -362,50 +414,85 @@
         </div>
         
             <br>
-        <div class="card-container">
-          <div class="resources-section">
-            <h2>Articles</h2>
+       
+            <h3 style="align-self: center; color: antiquewhite; font-size: xx-large;">Articles</h3><br><br><br>
         
            
-            <a href="https://www.nice.org.uk/guidance/cg170/documents/autism-management-of-autism-in-children-and-young-people-nice-version2
-            " class="resource-link" target="_blank">
-              Managing autism in children and young people
-            </a>
-        
-            <a href="https://www.nice.org.uk/about/nice-communities/social-care/quick-guides/enabling-positive-lives-for-autistic-adults" class="resource-link" target="_blank">
-              Enabling positive lives for autistic adults
-            </a>
-        
-            <a href="https://autismromania.ro/wp-content/uploads/2021/03/Copilul-meu-cu-autism.pdf" class="resource-link" target="_blank">
-              Children with autism
-            </a>
-        
-            <!-- Add more resource links as needed -->
-        
-          </div>
+          
 
-          <div class="resources-section">
-            <h2>Real stories</h2>
-        
-            <a href="https://www.printesaurbana.ro/2022/07/drumul-meu-ca-parinte-de-copil-cu-autism.html" class="resource-link" target="_blank">
-              My path as a parent of an autistic child
-            </a>
-        
-            <a href="https://totuldespremame.ro/copilul-tau/copilul-cu-nevoi-speciale/marina-neciu-mama-a-trei-copii-autisti-ma-simt-vinovata-ca-n-am-fost-in-stare-sa-fac-ce-ati-facut-voi-copii-sanatosi-sa-am-doar-grija-virozelor-si-a-cursurilor-de-inot" class="resource-link" target="_blank">
-              I feel guilty for having neurodivergent kids, though I love them more than life itself
-            </a>
-        
-            <a href="https://pediatricblog.info/2015/10/autismul-copilului-meu.html" class="resource-link" target="_blank">
-             My child's autism
-            </a>
-        
-            <!-- Add more resource links as needed -->
-        
-          </div>
+        <!-- Your content goes here -->
+    <div class="owl-carousel">
+      <div class="item">
+          <img src="resources/fam.jpg" alt="Image 1">
+          <div class="text-overlay">Caption for Image 1</div>
+      </div>
+      <div class="item">
+          <img src="resources/fam2.jpg" alt="Image 2">
+          <div class="text-overlay">Caption for Image 2</div>
+      </div>
+      <div class="item">
+          <img src="resources/emp.jpg" alt="Image 3">
+          <div class="text-overlay">Caption for Image 3</div>
+      </div>
+      <!-- Add more items as needed -->
+  </div>
 
-        </div>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Include Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Your script goes here -->
+  <script>
+      $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+              items: 1, // Number of items to display
+              loop: true, // Infinite loop
+              autoplay: true, // Autoplay the carousel
+              autoplayTimeout: 3000, // Autoplay interval in milliseconds
+              autoplayHoverPause: true, // Pause autoplay on hover
+              nav: true, // Show navigation arrows
+              navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"] // Custom navigation icons
+          });
+      });
+  </script>
 
-       
+
+<h3 style="align-self: center; color: antiquewhite; font-size: xx-large;">Real stories</h3><br><br><br>
+<!-- Your content goes here -->
+<div class="owl-carousel">
+  <div class="item">
+      <img src="resources/fam.jpg" alt="Image 1">
+      <div class="text-overlay">Caption for Image 1</div>
+  </div>
+  <div class="item">
+      <img src="resources/fam2.jpg" alt="Image 2">
+      <div class="text-overlay">Caption for Image 2</div>
+  </div>
+  <div class="item">
+      <img src="resources/emp.jpg" alt="Image 3">
+      <div class="text-overlay">Caption for Image 3</div>
+  </div>
+  <!-- Add more items as needed -->
+</div>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Include Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Your script goes here -->
+<script>
+  $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+          items: 1, // Number of items to display
+          loop: true, // Infinite loop
+          autoplay: true, // Autoplay the carousel
+          autoplayTimeout: 3000, // Autoplay interval in milliseconds
+          autoplayHoverPause: true, // Pause autoplay on hover
+          nav: true, // Show navigation arrows
+          navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"] // Custom navigation icons
+      });
+  });
+</script>
         
       </div>
     </div>

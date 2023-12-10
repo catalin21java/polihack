@@ -311,6 +311,7 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 3;
+  padding-bottom: 0%;
 }
 
 .modal-content {
@@ -324,6 +325,7 @@ button {
   max-height: 80%;
   overflow-y: auto;
   z-index: 1;
+  padding-bottom: 0%;
 }
 
 .close {
