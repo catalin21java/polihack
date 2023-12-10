@@ -4,7 +4,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="styleE.css">
-</head>
+  <!-- Include Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome 5 -->
+
+
+<!-- Include Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome 5 -->
+
+
+  <style>
+    /* Adjust the size of the carousel container */
+    .owl-carousel {
+        width: 70%; /* Set your preferred width */
+        margin: auto; /* Center the carousel */
+        padding: 0,0,0,0;
+    }
+
+    /* Adjust the size of the images within the carousel */
+    .owl-carousel .item {
+        position: relative;
+    }
+
+    .owl-carousel .item img {
+        width: 100%; /* Make the images fill the container */
+        height: 450px; /* Set your preferred fixed height */
+        object-fit:cover; /* Ensure the aspect ratio is maintained */
+    }
+
+    .owl-carousel .item .text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the text */
+        color: white;
+       
+        box-sizing: border-box;
+    }
+
+    /* Center the navigation arrows */
+    .owl-nav {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .owl-nav button {
+        background: none;
+        border: none;
+        font-size: 24px;
+    }
+</style>
+
+<style>
+  
+
+  .course {
+      margin-bottom: 20px;
+  }
+ 
+
+        .course button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #2c972e;
+            width: 300px;
+            height: 60px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            align-self: center;
+        }
+
+  label {
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  input[type="radio"] {
+      margin-right: 5px;
+  }
+
+  #quiz-form {
+      margin-top: 20px;
+      display: none; /* Quiz form initially hidden */
+  }
+
+  #submit-btn {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      width: 300;
+      height: 100;
+  }
+</style>
+
 <body>
 
 
@@ -93,7 +197,7 @@
         <button class="slide" id="openModalBtn1" onclick="openModal('myModal1')">Questions and Answers</button>
       </div>
       <div class="card">
-        <button class="slide" id="openModalBtn2" onclick="openModal('myModal2')">Planner</button>
+        <button class="slide" id="openModalBtn2" onclick="openModal('myModal2')">Training programms</button>
       </div>
       <div class="card">
         <button class="slide" id="openModalBtn3" onclick="openModal('myModal3')">Talk to an expert</button>
@@ -148,91 +252,124 @@
     <div class="modal-container" id="myModal2">
       <div class="modal-content">
         <span class="close" onclick="closeModal('myModal2')">&times;</span>
-        <h2 style="align-self: center; padding-top: 1%;">Planner</h2>
-        <p>
-          Establishing a routine can be a powerful tool for people with neurodivergence. Just like how a daily planner helps organize tasks, a routine brings a sense of order and predictability to each day. It acts like a reliable roadmap, offering comfort and reducing uncertainty in a sometimes overwhelming world. Here, you can create and keep a routine that works for your loved one, making things easier.
-        </p>
-        
-          <title>Rutina Data</title>
-        </head>
-        <style>
-          table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-            align-self: center;
-          }
-          th, td {
-            border: 1px solid #000;
-            text-align: left;
-            padding: 8px;
-          }
-          th {
-            background-color: #000;
-          }
+        <h2>Understanding Neurodivergent Pupils</h2>
 
-          .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        <div class="course">
+          <h3>Course 1: Introduction to Neurodiversity</h3>
+          <p>This course provides an introduction to neurodiversity and understanding neurodivergent pupils.</p>
+          <button onclick="window.location.href='https://theeducationhub.org.nz/wp-content/uploads/2023/07/An-introduction-to-neurodiversity-and-neurodivergence_ECE.pdf'">Go to Course Website</button>
+      </div>
+  
+      <div class="course">
+          <h3>Course 2: Supporting Neurodivergent Learners</h3>
+          <p>Explore strategies and best practices for supporting neurodivergent pupils in the learning environment.</p>
+          <button onclick="window.location.href='https://cognassist.com/wp-content/uploads/2021/02/How-to-support-Neurodiverse-learners-Handbook.pdf'">Go to Course Website</button>
+      </div>
+  
+      <div class="course">
+          <h3>Course 3: Creating Inclusive Classrooms</h3>
+          <p>Learn how to create inclusive classrooms that accommodate the diverse needs of neurodivergent students.</p>
+          <button onclick="window.location.href='https://www.uvu.edu/otl/docs/inclusion_tips_and_strategies_to_create_an_inclusive_classroom.pdf'">Go to Course Website</button>
+      </div>
+
+    <h2>Quiz</h2>
+
+    <select id="quiz-dropdown" onchange="toggleQuiz()">
+      <option value="">Select</option>
+      <option value="quiz-form">Introduction to Neurodiversity Quiz</option>
+      <option value="quiz-form-2">Supporting Neurodivergent Learners Quiz</option>
+      <option value="quiz-form-3">Creating Inclusive Classrooms Quiz</option>
+  </select>
+
+  <form id="quiz-form" class="quiz-form">
+    <p>1. What is neurodiversity?</p>
+    <label><input type="radio" name="q1" value="a"> A medical condition</label>
+    <label><input type="radio" name="q1" value="b"> A concept that recognizes and celebrates neurological diversity</label>
+    <label><input type="radio" name="q1" value="c"> A learning disability</label>
+
+    <p>2. How can teachers support neurodivergent learners?</p>
+    <label><input type="radio" name="q2" value="a"> By ignoring their unique needs</label>
+    <label><input type="radio" name="q2" value="b"> By providing a one-size-fits-all approach</label>
+    <label><input type="radio" name="q2" value="c"> By implementing inclusive teaching practices</label>
+
+    <p>3. What is the goal of creating inclusive classrooms?</p>
+    <label><input type="radio" name="q3" value="a"> To exclude certain students</label>
+    <label><input type="radio" name="q3" value="b"> To make learning challenging for all students</label>
+    <label><input type="radio" name="q3" value="c"> To accommodate the diverse needs of all students</label>
+
+    <button type="button" id="submit-btn" onclick="submitQuiz()" style="height: 100px; width: 300px;">Submit Quiz</button>
+</form>
+
+<form id="quiz-form-2" class="quiz-form">
+  <p>1. What is the focus of this course?</p>
+  <label><input type="radio" name="q1" value="a"> Neurodiversity in the workplace</label>
+  <label><input type="radio" name="q1" value="b"> Supporting neurodivergent learners</label>
+  <label><input type="radio" name="q1" value="c"> Teaching traditional subjects</label>
+
+  <p>2. Which of the following is a strategy for supporting neurodivergent pupils?</p>
+  <label><input type="radio" name="q2" value="a"> Ignoring their unique needs</label>
+  <label><input type="radio" name="q2" value="b"> Providing a one-size-fits-all approach</label>
+  <label><input type="radio" name="q2" value="c"> Implementing inclusive teaching practices</label>
+
+  <p>3. Why is it important to support neurodivergent learners?</p>
+  <label><input type="radio" name="q3" value="a"> Because it's a trend in education</label>
+  <label><input type="radio" name="q3" value="b"> To create an inclusive learning environment</label>
+  <label><input type="radio" name="q3" value="c"> Because it's required by law</label>
+
+  <button type="button" id="submit-btn" onclick="submitQuiz()" style="height: 100px; width: 300px;">Submit Quiz</button>
+</form>
+
+<form id="quiz-form-3" class="quiz-form">
+  <p>1. What is the primary goal of creating inclusive classrooms?</p>
+  <label><input type="radio" name="q1" value="a"> To exclude certain students</label>
+  <label><input type="radio" name="q1" value="b"> To make learning challenging for all students</label>
+  <label><input type="radio" name="q1" value="c"> To accommodate the diverse needs of all students</label>
+
+  <p>2. Inclusive classrooms aim to:</p>
+  <label><input type="radio" name="q2" value="a"> Promote uniformity among students</label>
+  <label><input type="radio" name="q2" value="b"> Cater to the needs of all students, including those with disabilities</label>
+  <label><input type="radio" name="q2" value="c"> Isolate neurodivergent students</label>
+
+  <p>3. What is a key strategy for creating an inclusive classroom?</p>
+  <label><input type="radio" name="q3" value="a"> Ignoring the needs of neurodivergent students</label>
+  <label><input type="radio" name="q3" value="b"> Providing a one-size-fits-all approach</label>
+  <label><input type="radio" name="q3" value="c"> Implementing differentiated instruction and accommodations</label>
+
+  <button type="button" id="submit-btn" onclick="submitQuiz()" style="height: 100px; width: 300px;">Submit Quiz</button>
+</form>
+
+<script>
+  function toggleQuiz() {
+      var quizDropdown = document.getElementById("quiz-dropdown");
+      var quizForm = document.getElementById("quiz-form");
+      var quizForm2 = document.getElementById("quiz-form-2");
+      var quizForm3 = document.getElementById("quiz-form-3");
+
+      // Hide all quiz forms
+      quizForm.style.display = "none";
+      quizForm2.style.display = "none";
+      quizForm3.style.display = "none";
+
+      // Show the selected quiz form
+      if (quizDropdown.value === "quiz-form") {
+          quizForm.style.display = "block";
+      }
+      else if (quizDropdown.value === "quiz-form-2") {
+          quizForm2.style.display = "block";
+      }
+      else if (quizDropdown.value === "quiz-form-3") {
+          quizForm3.style.display = "block";
+      }
   }
 
-  #addEntryForm {
-    width: 300px; /* Set the desired width for the form */
+  // Call toggleQuiz once to ensure no form is displayed on page load
+  toggleQuiz();
+
+  function submitQuiz() {
+      // You can implement the quiz scoring logic here
+      alert('Quiz submitted!');
   }
-
-  #addEntryForm label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  #addEntryForm input {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-
-  #addEntryForm input[type="submit"] {
-    width: 100%;
-  }
-          
-        </style>
-        <script src="scripts.js"></script> 
-        <h1>Rutina Data</h1>
-        <table id="rutinaTable">
-          <thead>
-            <tr>
-              <th>Ora</th>
-              <th>Luni</th>
-              <th>Marti</th>
-              <th>Miercuri</th>
-              <th>Joi</th>
-              <th>Vineri</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-        <br><br>
-
-        <div class="form-container">
-
-        </div>
-        <h2>Add New Entry</h2>
-      <form id="addEntryForm">
-        <label for="Ora">Ora:</label>
-        <input type="text" id="Ora" name="Ora"><br><br>
-        <label for="Luni">Luni:</label>
-        <input type="text" id="Luni" name="Luni"><br><br>
-        <label for="Marti">Marti:</label>
-        <input type="text" id="Marti" name="Marti"><br><br>
-        <label for="Miercuri">Miercuri:</label>
-        <input type="text" id="Miercuri" name="Miercuri"><br><br>
-        <label for="Joi">Joi:</label>
-        <input type="text" id="Joi" name="Joi"><br><br>
-        <label for="Vineri">Vineri:</label>
-        <input type="text" id="Vineri" name="Vineri"><br><br>
-        <input type="submit" value="Add Entry">
-      </form>
+</script>
       </div>
     </div>
 
@@ -353,47 +490,85 @@
         <p></p>
          <div>Unlock the potential of a neurodivergent-friendly workplace by delving into stories and articles. Real-life experiences and expert insights offer practical wisdom, guiding employers in creating environments that embrace diversity and cater to the unique strengths of neurodivergent individuals. Learn from others' successes and challenges to foster a more inclusive and understanding work culture.
         </div>
-        <div class="card-container">
-          <div class="resources-section">
-            <h2>Articles</h2>
+        <h3 style="align-self: center; color: antiquewhite; font-size: xx-large;">Articles</h3><br><br><br>
         
            
-            <a href="https://nationalautismassociation.org/wp-content/uploads/2018/03/NAA_First-Responder-Brochure_2018.pdf" class="resource-link" target="_blank">
-              Employer of autistic individuals
-            </a>
-        
-            <a href="https://rcni.com/sites/rcn_nspace/files/RCNi-Autism-Booklet-2015.pdf" class="resource-link" target="_blank">
-              Relevant information
-            </a>
-        
-            <a href="https://www.nice.org.uk/Media/Default/About/NICE-Communities/Social-care/quick-guides/Autism-in-U19s-quick-guide.pdf" class="resource-link" target="_blank">
-              Building a cohesive team of coworkers
-            </a>
-        
-            <!-- Add more resource links as needed -->
-        
-          </div>
+          
 
-          <div class="resources-section">
-            <h2>Real stories</h2>
-        
-            <a href="https://example.com/resource1" class="resource-link" target="_blank">
-              My difficulties with neuroinclusion in the workspace
-            </a>
-        
-            <a href="https://example.com/resource2" class="resource-link" target="_blank">
-              My experience collaborating with neurodivergent colleagues
-            </a>
-        
-            <a href="https://example.com/resource3" class="resource-link" target="_blank">
-              Managing complicated situations
-            </a>
-        
-            <!-- Add more resource links as needed -->
-        
-          </div>
+        <!-- Your content goes here -->
+    <div class="owl-carousel">
+      <div class="item">
+          <img src="resources/fam.jpg" alt="Image 1">
+          <div class="text-overlay">Caption for Image 1</div>
+      </div>
+      <div class="item">
+          <img src="resources/fam2.jpg" alt="Image 2">
+          <div class="text-overlay">Caption for Image 2</div>
+      </div>
+      <div class="item">
+          <img src="resources/emp.jpg" alt="Image 3">
+          <div class="text-overlay">Caption for Image 3</div>
+      </div>
+      <!-- Add more items as needed -->
+  </div>
 
-        </div>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Include Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Your script goes here -->
+  <script>
+      $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+              items: 1, // Number of items to display
+              loop: true, // Infinite loop
+              autoplay: true, // Autoplay the carousel
+              autoplayTimeout: 3000, // Autoplay interval in milliseconds
+              autoplayHoverPause: true, // Pause autoplay on hover
+              nav: true, // Show navigation arrows
+              navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"] // Custom navigation icons
+          });
+      });
+  </script>
+
+
+<h3 style="align-self: center; color: antiquewhite; font-size: xx-large;">Real stories</h3><br><br><br>
+<!-- Your content goes here -->
+<div class="owl-carousel">
+  <div class="item">
+      <img src="resources/fam.jpg" alt="Image 1">
+      <div class="text-overlay">Caption for Image 1</div>
+  </div>
+  <div class="item">
+      <img src="resources/fam2.jpg" alt="Image 2">
+      <div class="text-overlay">Caption for Image 2</div>
+  </div>
+  <div class="item">
+      <img src="resources/emp.jpg" alt="Image 3">
+      <div class="text-overlay">Caption for Image 3</div>
+  </div>
+  <!-- Add more items as needed -->
+</div>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Include Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Your script goes here -->
+<script>
+  $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+          items: 1, // Number of items to display
+          loop: true, // Infinite loop
+          autoplay: true, // Autoplay the carousel
+          autoplayTimeout: 3000, // Autoplay interval in milliseconds
+          autoplayHoverPause: true, // Pause autoplay on hover
+          nav: true, // Show navigation arrows
+          navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"] // Custom navigation icons
+      });
+  });
+</script>
+        
 
        
         
@@ -403,6 +578,13 @@
   </div>
 </div>
 
+  
+      
+    </div>
+  </div>
+
+</div>
+</div>
 
 
 
