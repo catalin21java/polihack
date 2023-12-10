@@ -226,8 +226,8 @@
         </div>
         <h2>Add a new entry into the schedule: </h2>
       <form id="addEntryForm">
-        <label for="Ora   ">Ora:</label>
-        <input type="text" id="Ora  " name="Ora   "><br><br>
+        <label for="Ora">Ora:</label>
+        <input type="text" id="Ora" name="Ora"><br><br>
         <label for="Luni">Luni:</label>
         <input type="text" id="Luni" name="Luni"><br><br>
         <label for="Marti">Marti:</label>
@@ -238,7 +238,7 @@
         <input type="text" id="Joi" name="Joi"><br><br>
         <label for="Vineri">Vineri:</label>
         <input type="text" id="Vineri" name="Vineri"><br><br>
-        <input type="submit" value="Add Entry">
+        <input type="submit" value="Add Entry" onclick="refreshPage()">
       </form>
       </div>
     </div>
@@ -267,6 +267,12 @@
     <input type="submit" value="Send message">
   </form>
     <script>
+    function refreshPage() {
+      // Reloads the current page
+      location.reload();
+    }
+
+      //afisat tabel
       fetch('/rutina')
         .then(response => response.json())
         .then(data => {
@@ -285,8 +291,23 @@
             cell4.textContent = item.Miercuri;
             cell5.textContent = item.Joi;
             cell6.textContent = item.Vineri;
+            [cell1, cell2, cell3, cell4, cell5, cell6].forEach(cell => {
+            cell.addEventListener('click', () => {
+              const currentValue = cell.textContent;
+              const input = document.createElement('input');
+              input.value = currentValue;
+              input.addEventListener('blur', () => {
+                cell.textContent = input.value;
+                // Here you can handle sending the updated data to the server
+                // For example, using fetch to send a PUT request with the updated value
+              });
+              cell.textContent = '';
+              cell.appendChild(input);
+              input.focus();
+            });
           });
-        })
+        });
+      });
         fetch('/chat')
         .then(response => response.json())
         .then(data => {
