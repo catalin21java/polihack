@@ -25,7 +25,40 @@
 
      <!-- Swiper CSS -->
      <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-
+     <style>
+      /* Add this CSS to your <head> or external CSS file */
+      .w3-modal-content {
+        max-width: 500px; /* Adjust the width as needed */
+        max-height: 400px; /* Adjust the width as needed */
+        margin: auto;
+        padding: 20px;
+        background-color: #f1f1f1; /* Background color */
+      }
+    
+      /* Optional: Style for the form elements */
+      .w3-modal-content form {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .w3-modal-content input[type="text"],
+      .w3-modal-content input[type="password"],
+      .w3-modal-content button {
+        margin-bottom: 10px;
+        padding: 8px;
+      }
+    
+      .w3-modal-content button {
+        background-color: #4CAF50; /* Button color */
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .w3-modal-content button:hover {
+        background-color: #45a049; /* Button hover color */
+      }
+    </style>
      
 
     </head>
@@ -33,7 +66,13 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
-   
+     function openLoginModal() {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+
+  function closeLoginModal() {
+    document.getElementById('loginModal').style.display = 'none';
+  }
   </script>
 
 
@@ -47,7 +86,10 @@
           <img style="height: 45px; width: 100px; " src="resources/logo.png" alt="Sicopan">
         </a>
         <!-- New login button -->
-        <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black"><i class="fa fa-sign-in"></i> Login</a>
+        <a href="javascript:void(0);" onclick="openLoginModal()" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black">
+          <i class="fa fa-sign-in"></i> Login
+        </a>
+
         <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black"><i class="fa fa-bookmark"></i> Contact Us</a>
         <a href="employers.html" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black"><i class="fa fa-user"></i> Employers</a>
         <a href="teachers.html" class="w3-bar-item w3-button w3-hide-small w3-creme w3-right w3-margin-top w3-text-black"><i class="fa fa-th"></i> Teachers</a>
@@ -64,6 +106,26 @@
           <a href="employers.html" class="w3-bar-item w3-button w3-burntsienna-text w3-center" onclick=toggleFunction()><i class="fa fa-user"></i> Employers</a>
           <a href="index.html#about" class="w3-bar-item w3-button w3-burntsienna-text w3-center" onclick=toggleFunction()><i class="fa fa-bookmark"></i> Contact Us</a>
         </div>
+  </div>
+
+  <!--Logica poppup buton-->
+  <div id="loginModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container">
+        <span onclick="closeLoginModal()" class="w3-button w3-display-topright">&times;</span>
+        <!-- Add your login form or content here -->
+        <h2>Login</h2>
+        <form>
+          <!-- Your login form fields -->
+          <!-- ... -->
+          <input type="text" placeholder="Email">
+          <p>
+          <input type="password" placeholder="Parola">
+          </p>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
