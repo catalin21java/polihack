@@ -45,6 +45,11 @@ app.post('/addRutina', express.json(), (req, res) => {
   if (!Ora || !Luni || !Marti || !Miercuri || !Joi || !Vineri) {
     return res.status(400).json({ error: 'All fields are required.' });
   }
+    // Validate Ora to be between 1 and 24
+    const parsedOra = parseInt(Ora, 10);
+    if (isNaN(parsedOra) || parsedOra < 1 || parsedOra > 24) {
+      return res.status(400).json({ error: 'Ora must be a number between 1 and 24.' });
+    }
 
   const sql = 'INSERT INTO Rutina (Ora, Luni, Marti, Miercuri, Joi, Vineri) VALUES (?, ?, ?, ?, ?, ?)';
   db.run(sql, [Ora, Luni, Marti, Miercuri, Joi, Vineri], function(err) {
