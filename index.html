@@ -31,7 +31,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
-    AOS.init();
+   
   </script>
 
 
@@ -75,7 +75,7 @@
           Your browser does not support the video tag.
           </video>
 
-          <button class="overlay-button" onclick="scrollToAbout()" >Find out more about Project Helix!</button>
+          <button class="overlay-button" onclick="scrollToAbout()" >Find out more about Helix!</button>
 
     </div>
 
@@ -85,14 +85,8 @@
    
 <div style="position: relative; " id="about">
     <div class="sections">
-      <h3 style="text-align:center; font-size:4vh;">Projects</h3>
-      <p style="font-size: 2.5vh; padding-left: 15%;padding-right: 15%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Nam vehicula lectus consectetur blandit fermentum. Aliquam 
-         in tempus justo, sit amet viverra enim. Donec at tortor vitae 
-         tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
-          at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
-           at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
-            luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
+      <h3 style="text-align:center; font-size:5vh;">ABOUT OUR PROJECT</h3>
+      <p style="font-size: 3.5vh; padding-left: 15%;padding-right: 15%;">Helix is a dedicated online platform designed to empower caregivers, teachers, and employers with valuable insights into the cognitive processes of individuals with diverse cognitive needs. Our mission is to bridge the understanding gap by providing a centralized resource hub and interactive tools tailored to meet the unique needs of those supporting individuals with mental disabilities.</p>
   
       </div>
   </div>
@@ -112,7 +106,9 @@
               <p class="card__subtitle">I am a</p>
             </div> 
             <div class="card__back">
-              <p class="card__body">This would be some longer text that gives a description of the things from the other side I guess</p>
+              <p class="card__body">Resources, routine planner, professional help from our collaborators.
+              </p>
+              <button class="card-body" style="background-color: #d4c5c5;"onclick="navigateToCGPage()" >Find out more!</button>
             </div>
           </div>
         </div>
@@ -125,7 +121,8 @@
               <p class="card__subtitle">I am a</p>
             </div> 
             <div class="card__back">
-              <p class="card__body">This would be some longer text that gives a description of the things from the other side I guess</p>
+              <p class="card__body">Resources, courses and professional help from our collaborators.</p>
+              <button class="card-body" style="background-color: #d4c5c5;"onclick="navigateToTPage()" >Find out more!</button>
             </div>
           </div>
         </div>
@@ -138,7 +135,8 @@
               <p class="card__subtitle">I am an</p>
             </div> 
             <div class="card__back">
-              <p class="card__body">This would be some longer text that gives a description of the things from the other side I guess</p>
+              <p class="card__body">Resources and professional help from our collaborators.</p>
+              <button class="card-body" style="background-color: #d4c5c5;"onclick="navigateToEPage()" >Find out more!</button>
             </div>
           </div>
         </div>
@@ -152,26 +150,23 @@
 
 
   <div class="row g-0">
-    <div class="col-12 col-md-6 g-0">
-      <div class="leftside w3-white" style="padding-top: 10%;padding-bottom: 10%;">
+    <div class="col-12 col-md-6 g-0 p-0">
+      <div class="leftside w3-white" style="padding-top: 5%;padding-bottom: 10%;">
         <!-- Content for the left side -->
-        <h1 class="text-center" style="font-size: 5vh;"> ABOUT ME</h1>
-        <p class="text-justify " style="font-size: 3vh; padding-left: 3%; padding-top: 3%; padding-right: 3%; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nam vehicula lectus consectetur blandit fermentum. Aliquam 
-          in tempus justo, sit amet viverra enim. Donec at tortor vitae 
-          tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
-           at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
-            at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
-             luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
+        <h1 class="text-center" style="font-size: 5vh;"> ABOUT US</h1>
+        <p class="text-justify " style="font-size: 3vh; padding-left: 10%; padding-top: 3%; padding-right: 10%; "> Helix is a non-profit organization founded by a dedicated team of five students, focuses on supporting neurodivergent individuals. Committed to fostering an inclusive community, Helix offers a range of programs, including support networks, educational initiatives, and skill development opportunities. The organization actively engages with local communities, schools, and businesses to promote neurodiversity awareness. Helix's vision is to create a world where neurodivergent individuals are celebrated for their unique strengths, and the organization invites volunteers, sponsors, and partners to join them in making a positive impact.</p>
 
       </div>
     </div>
-    <div class="col-12 col-md-6 g-0">
-      <div class="rightside" style="display: flex; justify-content: center; align-items: center;">
+    <div class="col-12 col-md-6 g-0 p-0 ">
+      <div class="rightside" style="background-image: url('resources/bpeople.jpg');" >
         <!-- Content for the right side -->
         
       </div>
     </div>
+
+
+    
     
   </div>
 
@@ -189,6 +184,21 @@
         function scrollToAbout() {
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     }
+
+    function navigateToCGPage() {
+            // Change 'yawn.html' to the actual path of your destination page
+            window.location.href = 'caregivers.html';
+        }
+
+        function navigateToTPage() {
+            // Change 'yawn.html' to the actual path of your destination page
+            window.location.href = 'teachers.html';
+        }
+
+        function navigateToEPage() {
+            // Change 'yawn.html' to the actual path of your destination page
+            window.location.href = 'employers.html';
+        }
    </script>
 
 
@@ -199,156 +209,11 @@
     <footer class="w3-center w3-padding-64 w3-creme-bg  " >
         <a href="#home" class="w3-button w3-burntsienna w3-hover-pale-yellow w3-xlarge"><i class="fa fa-arrow-up w3-margin-right w3-creme"></i>To the top</a>
         <div class="w3-xlarge w3-section w3-creme-bg    ">
-            <i class="fa fa-facebook-official w3-hover-opacity "></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-
+           
     <!-- Footer end. -->
     </footer>
-    <head>
-      <title>Rutina Data</title>
-    </head>
-    <style>
-      table {
-        border-collapse: collapse;
-        width: 50%;
-        margin-top: 20px;
-      }
-      th, td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-    </style>
-    <script src="scripts.js"></script> 
-    <h1>Rutina Data</h1>
-    <table id="rutinaTable">
-      <thead>
-        <tr>
-          <th>Ora</th>
-          <th>Luni</th>
-          <th>Marti</th>
-          <th>Miercuri</th>
-          <th>Joi</th>
-          <th>Vineri</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <h2>Add New Entry</h2>
-  <form id="addEntryForm">
-    <label for="Ora">Ora:</label>
-    <input type="text" id="Ora" name="Ora"><br><br>
-    <label for="Luni">Luni:</label>
-    <input type="text" id="Luni" name="Luni"><br><br>
-    <label for="Marti">Marti:</label>
-    <input type="text" id="Marti" name="Marti"><br><br>
-    <label for="Miercuri">Miercuri:</label>
-    <input type="text" id="Miercuri" name="Miercuri"><br><br>
-    <label for="Joi">Joi:</label>
-    <input type="text" id="Joi" name="Joi"><br><br>
-    <label for="Vineri">Vineri:</label>
-    <input type="text" id="Vineri" name="Vineri"><br><br>
-    <input type="submit" value="Add Entry">
-  </form>
-  <h1>Chat</h1>
-  <table id="Mesaj">
-    <thead>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <form id="Chat">
-    <input type="text" id="sent" name="sent"><br><br>
-    <input type="submit" value="Trimite mesaj">
-  </form>
-    <script>
-      fetch('/rutina')
-        .then(response => response.json())
-        .then(data => {
-          const rutinaTable = document.getElementById('rutinaTable').getElementsByTagName('tbody')[0];
-          data.forEach(item => {
-            const row = rutinaTable.insertRow();
-            const cell1 = row.insertCell(0);
-            const cell2 = row.insertCell(1);
-            const cell3 = row.insertCell(2);
-            const cell4 = row.insertCell(3);
-            const cell5 = row.insertCell(4);
-            const cell6 = row.insertCell(5);
-            cell1.textContent = item.Ora;
-            cell2.textContent = item.Luni;
-            cell3.textContent = item.Marti;
-            cell4.textContent = item.Miercuri;
-            cell5.textContent = item.Joi;
-            cell6.textContent = item.Vineri;
-          });
-        })
-        fetch('/chat')
-        .then(response => response.json())
-        .then(data => {
-          const rutinaTable = document.getElementById('Mesaj').getElementsByTagName('tbody')[0];
-          data.forEach(item => {
-            const row = rutinaTable.insertRow();
-            const cell1 = row.insertCell(0);
-            cell1.textContent = item.Mesaj;
-          });
-        })
-        .catch(error => console.error('Error:', error));
-  
-        document.getElementById('addEntryForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-  
-        const formData = new FormData(this);
-        const Ora = formData.get('Ora');
-        const Luni = formData.get('Luni');
-        const Marti = formData.get('Marti');
-        const Miercuri = formData.get('Miercuri');
-        const Joi = formData.get('Joi');
-        const Vineri = formData.get('Vineri');
-  
-        fetch('/addRutina', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ Ora,Luni,Marti,Miercuri,Joi,Vineri })
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('New entry added:', data);
-          // Optionally, update the table with the new data
-          // Fetch the data again and update the table
-        })
-        .catch(error => console.error('Error:', error));
-      });
-
-      document.getElementById('Chat').addEventListener('submit', function(event) {
-        event.preventDefault();
-  
-        const formData = new FormData(this);
-        const sent = formData.get('sent');
-  
-        fetch('/addchat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({sent})
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('New entry added:', data);
-          // Optionally, update the table with the new data
-          // Fetch the data again and update the table
-        })
-        .catch(error => console.error('Error:', error));
-      });
-    </script>
+    
+ 
 </body>
    
 </html>

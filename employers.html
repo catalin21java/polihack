@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="styleE.css">
 </head>
 <body>
 
@@ -23,9 +23,11 @@
   </header>
 
 
-    <div class="bgimg-1">
-      <div class="caption">
-        <span class="borders"><span class="auto-input"></span>
+    <div class="bgimg-1" style="padding-bottom: 0%; ">
+      <div class="caption" style="padding-left: 1%; padding-bottom: 0%;">
+        <span class="borders " style="padding-left: 0%;"><span class="auto-input" style="padding-left: 0%;  font-size: 7.25vw;  font-stretch: extra-condensed;font-weight: bolder;   font-family: fantasy"></span>
+        <br>        
+        <span class="borders " style="padding-left: 0%;"><span class="auto-input2" style="padding-left: 0%;  font-size: 5.25vw;  font-stretch: extra-condensed;font-weight: bolder;   font-family: fantasy"></span>
         </span>
         
         
@@ -38,16 +40,12 @@
 
 
 
-<div style="position: relative; ">
+<div style="position: relative; padding-top: 0%;">
   <div class="sections">
-    <h3 style="text-align:center; font-size:4vh;">Projects</h3>
-    <p style="font-size: 2.5vh;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-       Nam vehicula lectus consectetur blandit fermentum. Aliquam 
-       in tempus justo, sit amet viverra enim. Donec at tortor vitae 
-       tellus rhoncus vestibulum eu ut felis. Curabitur feugiat nisl
-        at nisi tempus, ac ultricies sapien mollis. Mauris fermentum
-         at purus non tincidunt. Donec tellus urna, iaculis a ornare vitae,
-          luctus a metus. Nam accumsan sodales sodales. Etiam et ex quis dui suscipit molestie sed et ante.</p>
+    <h3 style="text-align:center; font-size:4vh;"></h3>
+    <p style="font-size: 3.5vh; padding-left: 15%;padding-right: 15%;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">  In the workplace, supporting neurodivergent individuals is like fine-tuning a team. Recognizing and addressing their unique needs—whether in communication, routines, or sensitivities—creates a more inclusive and harmonious environment. Your efforts make a big difference in fostering a workplace where everyone can thrive. We recognize the challenges one faces when collaborating with a neurodivergent individual without much knowledge beforehand. This is why our team wants to help by providing you with articles, real stories and the opportunity to speak to professional help. Browse, learn and better yourself and your relationships with the ones you work with. 
+
+    </p>
 
     </div>
 </div>
@@ -57,38 +55,89 @@
 
 
 
-<div class="bgimg-2">
+<div class="bgimg-3">
   <div class="caption">
     <span class="borders" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
   </div>
 </div>
 
+<div class="row g-0">
+  <div class="col-12 col-md-6 g-0 p-0">
+    <div class="leftside " style="padding-top: 5%;padding-bottom: 10%;">
+      <!-- Content for the left side -->
+      <h1 class="text-center" style="font-size: 4vh;"> How can employers benefit from our platform? </h1>
+      <p class="text-justify " style="font-size: 2.7vh; padding-left: 4%; padding-top: 3%; padding-right: 4%; ">Employers benefit significantly from working with neurodivergent individuals as it brings diverse skills and perspectives, fostering innovation and creativity. This diverse talent pool enhances productivity and problem-solving capabilities while promoting a positive company image and loyalty among employees. Embracing neurodiversity aligns with legal requirements, fulfilling ethical responsibilities. Neurodivergent individuals contribute to an inclusive workplace culture, offering unique strengths that improve adaptability and flexibility. Ultimately, by recognizing and valuing neurodiversity, employers create a dynamic and innovative work environment, gaining a competitive edge in today's diverse and evolving business landscape.</p>
+
+    </div>
+  </div>
+  <div class="col-12 col-md-6 g-0 p-0 ">
+    <div class="rightside" style="background-image: url('resources/work.jpeg');" >
+      <!-- Content for the right side -->
+      
+    </div>
+  </div>
+
+
+  
+  
+</div>
+
+
+
 <!-- HERE WE WILL TALK ABOUT MY PROJECT AND HAVE DIFFERENT PAGE FOR PHOTOS AND OTHER STUFF-->
 <div style="position:relative;">
   <div class="sections">
 
-    <div class="button-container">
-      <button id="openModalBtn1" onclick="openModal('myModal1')">Questions and Answers</button>
-      <button id="openModalBtn2" onclick="openModal('myModal2')">Planner</button>
-      <button id="openModalBtn3" onclick="openModal('myModal3')">Talk to an expert</button>
-      <button id="openModalBtn4" onclick="openModal('myModal4')">Resources</button>
+    <div class="card-container">
+      <div class="card">
+        <button class="slide" id="openModalBtn1" onclick="openModal('myModal1')">Questions and Answers</button>
+      </div>
+      <div class="card">
+        <button class="slide" id="openModalBtn2" onclick="openModal('myModal2')">Planner</button>
+      </div>
+      <div class="card">
+        <button class="slide" id="openModalBtn3" onclick="openModal('myModal3')">Talk to an expert</button>
+      </div>
+      <div class="card">
+        <button class="slide" id="openModalBtn4" onclick="openModal('myModal4')">Resources</button>
+      </div>
     </div>
+    
 
     <div class="modal-container" id="myModal1">
       <div class="modal-content">
         <span class="close" onclick="closeModal('myModal1')">&times;</span>
         <h2>Questions and Answers</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-        </p>
-        <h3>Resources:</h3>
-        <ul>
-          <li><a href="#">Resource 1</a></li>
-          <li><a href="#">Resource 2</a></li>
-          <li><a href="#">Resource 3</a></li>
-        </ul>
-        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+
+        <div class="faq-container">
+          <div class="faq-question" onclick="toggleAnswer('q1')">How can employers create an inclusive workplace for neurodivergent employees?</div>
+          <div class="faq-answer" id="q1">Employers can foster inclusivity by providing training on neurodiversity, implementing flexible work arrangements, offering clear communication channels, and ensuring physical and sensory-friendly environments. Additionally, creating employee resource groups and promoting awareness campaigns contributes to a supportive workplace culture.</div>
+      
+          <div class="faq-question" onclick="toggleAnswer('q2')">What benefits can neurodivergent employees bring to a company?</div>
+          <div class="faq-answer" id="q2">Neurodivergent employees often possess unique skills, such as attention to detail, pattern recognition, and innovative problem-solving. Their diverse perspectives contribute to a more creative and dynamic work environment, fostering innovation and enhancing the overall productivity of the team.</div>
+
+          <div class="faq-question" onclick="toggleAnswer('q3')">How can employers support neurodivergent employees in their professional development?</div>
+          <div class="faq-answer" id="q3">Employers can support neurodivergent employees by providing clear expectations, offering mentoring programs, and creating personalized development plans. Tailoring training programs to accommodate diverse learning styles and providing opportunities for skill-building helps neurodivergent individuals thrive in their roles.</div>
+
+          <div class="faq-question" onclick="toggleAnswer('q4')">What accommodations might be necessary for neurodivergent employees in the workplace?</div>
+          <div class="faq-answer" id="q4">Accommodations may include flexible work hours, quiet workspaces, clear communication methods, and visual aids. Providing training materials in multiple formats and ensuring accessibility in digital platforms are also crucial accommodations to consider.</div>
+
+          <div class="faq-question" onclick="toggleAnswer('q5')">How can employers address potential challenges in team dynamics involving neurodivergent and neurotypical employees?</div>
+          <div class="faq-answer" id="q5">Employers can promote awareness and understanding among all team members through training sessions, encouraging open communication, and fostering a culture of respect and inclusivity. Establishing clear guidelines for collaboration, acknowledging diverse working styles, and providing support when needed helps build a cohesive and supportive team environment.</div>
+      
+          <!-- Add more questions and answers as needed -->
+      
+        </div>
+        <div id="qaForm">
+          <form id="questionForm">
+            <label for="question">Didn't find yours? Submit it anonymously and have it answered by one of our professional collaborators.</label>
+            <textarea id="question" name="question" rows="4" required></textarea>
+      
+            
+      
+            <input type="submit" value="Submit">
+          </form>
+        </div>
       </div>
     </div>
 
@@ -99,18 +148,91 @@
     <div class="modal-container" id="myModal2">
       <div class="modal-content">
         <span class="close" onclick="closeModal('myModal2')">&times;</span>
-        <h2>Questions and Answers</h2>
+        <h2 style="align-self: center; padding-top: 1%;">Planner</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+          Establishing a routine can be a powerful tool for people with neurodivergence. Just like how a daily planner helps organize tasks, a routine brings a sense of order and predictability to each day. It acts like a reliable roadmap, offering comfort and reducing uncertainty in a sometimes overwhelming world. Here, you can create and keep a routine that works for your loved one, making things easier.
         </p>
-        <h3>Resources:</h3>
-        <ul>
-          <li><a href="#">Resource 1</a></li>
-          <li><a href="#">Resource 2</a></li>
-          <li><a href="#">Resource 3</a></li>
-        </ul>
-        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+        
+          <title>Rutina Data</title>
+        </head>
+        <style>
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            align-self: center;
+          }
+          th, td {
+            border: 1px solid #000;
+            text-align: left;
+            padding: 8px;
+          }
+          th {
+            background-color: #000;
+          }
+
+          .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #addEntryForm {
+    width: 300px; /* Set the desired width for the form */
+  }
+
+  #addEntryForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #addEntryForm input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  #addEntryForm input[type="submit"] {
+    width: 100%;
+  }
+          
+        </style>
+        <script src="scripts.js"></script> 
+        <h1>Rutina Data</h1>
+        <table id="rutinaTable">
+          <thead>
+            <tr>
+              <th>Ora</th>
+              <th>Luni</th>
+              <th>Marti</th>
+              <th>Miercuri</th>
+              <th>Joi</th>
+              <th>Vineri</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <br><br>
+
+        <div class="form-container">
+
+        </div>
+        <h2>Add New Entry</h2>
+      <form id="addEntryForm">
+        <label for="Ora   ">Ora:</label>
+        <input type="text" id="Ora  " name="Ora   "><br><br>
+        <label for="Luni">Luni:</label>
+        <input type="text" id="Luni" name="Luni"><br><br>
+        <label for="Marti">Marti:</label>
+        <input type="text" id="Marti" name="Marti"><br><br>
+        <label for="Miercuri">Miercuri:</label>
+        <input type="text" id="Miercuri" name="Miercuri"><br><br>
+        <label for="Joi">Joi:</label>
+        <input type="text" id="Joi" name="Joi"><br><br>
+        <label for="Vineri">Vineri:</label>
+        <input type="text" id="Vineri" name="Vineri"><br><br>
+        <input type="submit" value="Add Entry">
+      </form>
       </div>
     </div>
 
@@ -121,36 +243,160 @@
     <div class="modal-container" id="myModal3">
       <div class="modal-content">
         <span class="close" onclick="closeModal('myModal3')">&times;</span>
-        <h2>Questions and Answers</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-        </p>
-        <h3>Resources:</h3>
-        <ul>
-          <li><a href="#">Resource 1</a></li>
-          <li><a href="#">Resource 2</a></li>
-          <li><a href="#">Resource 3</a></li>
-        </ul>
-        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+        <h1 style="align-self: center; padding-top: 2%;">Talk to an expert</h1>
+        <p></p>
+        <p>Start a chat with one of our certified specialists and collaborators. Ask for advice, further resources and support. We’re here for you.</p>
+        
+        
+        
+        <h4>Start typing...</h4>
+  <table id="Mesaj">
+    <thead>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <form id="Chat">
+    <input type="text" id="sent" name="sent"><br><br>
+    <input type="submit" value="Send message">
+  </form>
+    <script>
+      fetch('/rutina')
+        .then(response => response.json())
+        .then(data => {
+          const rutinaTable = document.getElementById('rutinaTable').getElementsByTagName('tbody')[0];
+          data.forEach(item => {
+            const row = rutinaTable.insertRow();
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+            const cell3 = row.insertCell(2);
+            const cell4 = row.insertCell(3);
+            const cell5 = row.insertCell(4);
+            const cell6 = row.insertCell(5);
+            cell1.textContent = item.Ora;
+            cell2.textContent = item.Luni;
+            cell3.textContent = item.Marti;
+            cell4.textContent = item.Miercuri;
+            cell5.textContent = item.Joi;
+            cell6.textContent = item.Vineri;
+          });
+        })
+        fetch('/chat')
+        .then(response => response.json())
+        .then(data => {
+          const rutinaTable = document.getElementById('Mesaj').getElementsByTagName('tbody')[0];
+          data.forEach(item => {
+            const row = rutinaTable.insertRow();
+            const cell1 = row.insertCell(0);
+            cell1.textContent = item.Mesaj;
+          });
+        })
+        .catch(error => console.error('Error:', error));
+  
+        document.getElementById('addEntryForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        const formData = new FormData(this);
+        const Ora = formData.get('Ora');
+        const Luni = formData.get('Luni');
+        const Marti = formData.get('Marti');
+        const Miercuri = formData.get('Miercuri');
+        const Joi = formData.get('Joi');
+        const Vineri = formData.get('Vineri');
+  
+        fetch('/addRutina', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ Ora,Luni,Marti,Miercuri,Joi,Vineri })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('New entry added:', data);
+          // Optionally, update the table with the new data
+          // Fetch the data again and update the table
+        })
+        .catch(error => console.error('Error:', error));
+      });
+
+      document.getElementById('Chat').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        const formData = new FormData(this);
+        const sent = formData.get('sent');
+  
+        fetch('/addchat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({sent})
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('New entry added:', data);
+          // Optionally, update the table with the new data
+          // Fetch the data again and update the table
+        })
+        .catch(error => console.error('Error:', error));
+      });
+    </script>
       </div>
     </div>
+
+
 
     <div class="modal-container" id="myModal4">
       <div class="modal-content">
         <span class="close" onclick="closeModal('myModal4')">&times;</span>
-        <h2>Questions and Answers</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-          Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-        </p>
-        <h3>Resources:</h3>
-        <ul>
-          <li><a href="#">Resource 1</a></li>
-          <li><a href="#">Resource 2</a></li>
-          <li><a href="#">Resource 3</a></li>
-        </ul>
-        <img src="resources/lemon_cake_high_rez.jpg" alt="Placeholder Image">
+        <h2 style="align-self: center; padding-top: 2%;">Resources</h2>
+        <p></p>
+         <div>Unlock the potential of a neurodivergent-friendly workplace by delving into stories and articles. Real-life experiences and expert insights offer practical wisdom, guiding employers in creating environments that embrace diversity and cater to the unique strengths of neurodivergent individuals. Learn from others' successes and challenges to foster a more inclusive and understanding work culture.
+        </div>
+        <div class="card-container">
+          <div class="resources-section">
+            <h2>Articles</h2>
+        
+           
+            <a href="https://nationalautismassociation.org/wp-content/uploads/2018/03/NAA_First-Responder-Brochure_2018.pdf" class="resource-link" target="_blank">
+              Employer of autistic individuals
+            </a>
+        
+            <a href="https://rcni.com/sites/rcn_nspace/files/RCNi-Autism-Booklet-2015.pdf" class="resource-link" target="_blank">
+              Relevant information
+            </a>
+        
+            <a href="https://www.nice.org.uk/Media/Default/About/NICE-Communities/Social-care/quick-guides/Autism-in-U19s-quick-guide.pdf" class="resource-link" target="_blank">
+              Building a cohesive team of coworkers
+            </a>
+        
+            <!-- Add more resource links as needed -->
+        
+          </div>
+
+          <div class="resources-section">
+            <h2>Real stories</h2>
+        
+            <a href="https://example.com/resource1" class="resource-link" target="_blank">
+              My difficulties with neuroinclusion in the workspace
+            </a>
+        
+            <a href="https://example.com/resource2" class="resource-link" target="_blank">
+              My experience collaborating with neurodivergent colleagues
+            </a>
+        
+            <a href="https://example.com/resource3" class="resource-link" target="_blank">
+              Managing complicated situations
+            </a>
+        
+            <!-- Add more resource links as needed -->
+        
+          </div>
+
+        </div>
+
+       
+        
       </div>
     </div>
 
@@ -160,12 +406,23 @@
 
 
 
-<div class="bgimg-2">
-  <div class="caption">
-    <span class="borders" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
-  </div>
-</div>
 
+
+
+<script>
+  function toggleAnswer(questionId) {
+    const answer = document.getElementById(questionId);
+    const question = document.querySelector(`.${questionId}`);
+
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      question.classList.remove("active");
+    } else {
+      answer.style.display = "block";
+      question.classList.add("active");
+    }
+  }
+</script>
 
 
 <script src="script.js"></script>
@@ -173,12 +430,17 @@
 <script>
   var typed = new Typed(".auto-input",{
 
-strings:["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales magna id ante vehicula tempor. "],
-typeSpeed:50,
-backSoeed:50,
+strings:["Employers, this is for you."],
+typeSpeed:20,
+backSoeed:20,
 loop:false
 
+
+
 })
+
+
+
 
 
 
