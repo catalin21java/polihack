@@ -387,36 +387,20 @@
         
         
         <h4>Start typing...</h4>
-  <table id="Mesaj">
-    <thead>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <form id="Chat">
-    <input type="text" id="sent" name="sent"><br><br>
-    <input type="submit" value="Send message">
-  </form>
+        <table id="Mesaj">
+          <thead>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <form id="Chat">
+          <input type="text" id="sent" name="sent"><br><br>
+          <input type="submit" value="Send message" onclick="refreshPage()">
+        </form>
     <script>
-      fetch('/rutina')
-        .then(response => response.json())
-        .then(data => {
-          const rutinaTable = document.getElementById('rutinaTable').getElementsByTagName('tbody')[0];
-          data.forEach(item => {
-            const row = rutinaTable.insertRow();
-            const cell1 = row.insertCell(0);
-            const cell2 = row.insertCell(1);
-            const cell3 = row.insertCell(2);
-            const cell4 = row.insertCell(3);
-            const cell5 = row.insertCell(4);
-            const cell6 = row.insertCell(5);
-            cell1.textContent = item.Ora;
-            cell2.textContent = item.Luni;
-            cell3.textContent = item.Marti;
-            cell4.textContent = item.Miercuri;
-            cell5.textContent = item.Joi;
-            cell6.textContent = item.Vineri;
-          });
-        })
+          function refreshPage() {
+      // Reloads the current page
+      location.reload();
+    }
         fetch('/chat')
         .then(response => response.json())
         .then(data => {
@@ -428,33 +412,6 @@
           });
         })
         .catch(error => console.error('Error:', error));
-  
-        document.getElementById('addEntryForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-  
-        const formData = new FormData(this);
-        const Ora = formData.get('Ora');
-        const Luni = formData.get('Luni');
-        const Marti = formData.get('Marti');
-        const Miercuri = formData.get('Miercuri');
-        const Joi = formData.get('Joi');
-        const Vineri = formData.get('Vineri');
-  
-        fetch('/addRutina', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ Ora,Luni,Marti,Miercuri,Joi,Vineri })
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('New entry added:', data);
-          // Optionally, update the table with the new data
-          // Fetch the data again and update the table
-        })
-        .catch(error => console.error('Error:', error));
-      });
 
       document.getElementById('Chat').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -480,9 +437,6 @@
     </script>
       </div>
     </div>
-
-
-
     <div class="modal-container" id="myModal4">
       <div class="modal-content">
         <span class="close" onclick="closeModal('myModal4')">&times;</span>
