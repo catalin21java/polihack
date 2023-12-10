@@ -16,7 +16,7 @@ const db = new sqlite3.Database('./date.db', (err) => {
   }
 });
 
-// Endpoint to fetch data from the 'Rutina' table
+// Select data from the Rutina table
 app.get('/rutina', (req, res) => {
   db.all('SELECT Ora, Luni, Marti, Miercuri, Joi, Vineri FROM Rutina ORDER BY Ora', (err, rows) => {
     if (err) {
@@ -27,6 +27,8 @@ app.get('/rutina', (req, res) => {
     res.json(rows);
   });
 });
+
+//Select data from the Chat table
 app.get('/chat', (req, res) => {
   db.all('SELECT Mesaj FROM Chat', (err, rows) => {
     if (err) {
@@ -37,9 +39,10 @@ app.get('/chat', (req, res) => {
     res.json(rows);
   });
 });
-// Endpoint to add data to the 'Rutina' table
+
+// Add data to the Rutina table
 app.post('/addRutina', express.json(), (req, res) => {
-  console.log('Received POST request at /addRutina'); // Check if this log appears in the server console
+  console.log('Received POST request at /addRutina');
   const { Ora, Luni, Marti, Miercuri, Joi, Vineri } = req.body;
 
   if (!Ora || !Luni || !Marti || !Miercuri || !Joi || !Vineri) {
@@ -66,11 +69,12 @@ app.post('/addRutina', express.json(), (req, res) => {
       Vineri: Vineri
     });
   });
-  console.log('Completed handling POST request'); // Check if this log appears after data processing
+  console.log('Completed handling POST request');
 });
-// Endpoint to add data to the 'Rutina' table
+
+// Add data to the Chat table
 app.post('/addchat', express.json(), (req, res) => {
-  console.log('Received POST request at /addchat'); // Check if this log appears in the server console
+  console.log('Received POST request at /addchat');
   const {sent} = req.body;
 
   if (!sent) {
@@ -87,30 +91,9 @@ app.post('/addchat', express.json(), (req, res) => {
       sent: sent 
     });
   });
-  console.log('Completed handling POST request'); // Check if this log appears after data processing
+  console.log('Completed handling POST request'); 
 });
-//pentru schimbat celule din tabel
-app.put('/updateRutina/:id', express.json(), (req, res) => {
-  console.log('started handling POST request');
-  const { id } = req.params;
-  const { column, value } = req.body;
 
-  // Assuming 'id' is the identifier for the row to update in the database
-  // 'column' is the column name to update, and 'value' is the new value
-
-  // Construct the SQL query to update the specific column of a row in your table
-  const sql = `UPDATE Rutina SET ${column} = ? WHERE id = ?`;
-
-  // Execute the SQL query to update the database
-  db.run(sql, [value, id], function(err) {
-    if (err) {
-      console.log('failed handling POST request');
-      return res.status(500).json({ error: err.message });
-    }
-    console.log('Completed handling POST request');
-    res.json({ message: 'Row updated successfully' });
-  });
-});
 // Serve the index.html file
 app.use(express.static(path.join(__dirname)));
 app.get('/', (req, res) => {
