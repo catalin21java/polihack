@@ -113,21 +113,28 @@
     <div class="w3-modal-content w3-animate-zoom">
       <div class="w3-container">
         <span onclick="closeLoginModal()" class="w3-button w3-display-topright">&times;</span>
-        <!-- Add your login form or content here -->
         <h2>Login</h2>
         <form>
-          <!-- Your login form fields -->
-          <!-- ... -->
-          <input type="text" placeholder="Email">
+          <input type="text" placeholder="Email" style="width: 100%;">
           <p>
-          <input type="password" placeholder="Parola">
+            <input type="password" placeholder="Parola" style="width: 100%;">
           </p>
-          <button type="submit">Login</button>
+  
+          <!-- Radio buttons for account type -->
+          <p>
+            <input type="radio" id="expertRadio" name="accountType" value="expert">
+            <label for="expertRadio">Connect as Expert</label>
+          </p>
+          <p>
+            <input type="radio" id="guestRadio" name="accountType" value="guest">
+            <label for="guestRadio">Connect as Guest</label>
+          </p>
+  
+          <button  type="submit">Login</button>
         </form>
       </div>
     </div>
   </div>
-</div>
 
     <!-- VIDEO -->
     <div class="video-section" id="home">
@@ -280,7 +287,16 @@
             border: none;
             cursor: pointer;
         }
-
+        
+       .button23{
+            padding: 8px 16px;
+            width: 200px;
+            height: 70px;
+            background-color: #854628;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
     </style>
     <script>
         function goToTop() {
